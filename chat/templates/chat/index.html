@@ -12,6 +12,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            gap: 8px;
             height: calc(100vh - 64px);
         }
     </style>
@@ -52,6 +54,11 @@
       <main class="mdl-layout__content">
         <div class="page-content">
           <!-- Your content goes here -->
+           {% for message in messages %}
+           <div>
+              {{message.author.first_name }}: {{ message.text }}
+           </div>
+           {% endfor %}
           <!-- Accent-colored raised button with ripple -->
           <!-- Textfield with Floating Label -->
 
