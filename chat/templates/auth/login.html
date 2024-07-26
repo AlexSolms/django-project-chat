@@ -1,0 +1,10 @@
+<h1>Login</h1>
+
+{% if wrongPassword %}
+<p>Benutzername oder Passwort ist falsch!</p>
+{% enfif %}
+<form action="/login/" method="POST">
+    <input type="text" name="inp_login" id="id_inp_login">
+    <input type="password" name="inp_pw" id="id_inp_pw">
+    <div><button>Login</button></div>
+</form>
