@@ -17,7 +17,9 @@ def index(request):
     return render(request, 'chat/index.html', {'messages': chatMessages})
 
 def login_view(request):
-    redirect = request.GET.get('next')
+    #redirect = request.GET.get('next')
+   # if redirect == None:
+    redirect = '/chat/'
     if request.method == 'POST':
         user = authenticate(username=request.POST.get('inp_login'), password=request.POST.get('inp_pw'))
         if user:
